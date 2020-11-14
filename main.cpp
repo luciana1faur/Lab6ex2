@@ -1,15 +1,14 @@
-#include <iostream>
-using namespace std;
+#include <iostream> 
+#include <cstdlib>   // pt. prototipul funcției rand()
+using namespace std; 
 
-int main() {
-  int x, nrLinii, cub;
-
-  cout << "Numarul de linii este: ";
-  cin >> nrLinii;
-
-for(x = 1; x <= nrLinii; x++){
-  cub = x * x * x;
-  cout << "Numarul este:  " << x << " iar " << x << " la cub este " << cub << endl;
-}
-
+int main()
+{
+  int i, v;
+  srand (time(NULL));
+  for(i=1; i <= 9; i++) {
+    v = rand() % 49 + 1;
+    cout << v << " ";
+  }
+  cout << endl;
 }
